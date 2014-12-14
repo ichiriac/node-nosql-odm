@@ -78,6 +78,9 @@ var manager = function(options) {
 };
 util.inherits(manager, EventEmitter);
 
+// promise helper
+manager.q = q;
+
 /**
  * Connects to couchbase
  */
