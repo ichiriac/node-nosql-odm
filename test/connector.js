@@ -1,6 +1,14 @@
 // this is an helper for creating a new session
-var manager = require(process.cwd() + '/main');
-var config = require(process.cwd() + '/test');
+try {
+  var config = require(process.cwd() + '/config');
+  var manager = require(process.cwd() + '/main');
+} catch(e) {
+  var config = require(process.cwd() + '/node_modules/sofa-odm/config');
+  var manager = require(process.cwd() + '/node_modules/sofa-odm/main');
+}
+
+
+
 var session = new manager();
 module.exports = function(mock) {
   session.mappers = {};

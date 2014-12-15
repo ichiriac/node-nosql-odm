@@ -12,13 +12,18 @@ technicals aspects of any NoSQL engine (support Couchbase).
  * Mappers definition are compliant with JSON Schema Definition
  * Using Promises API and EventEmitter
 
-*Current version: [v/0.1.7][dist]*
+*Current version: [v/0.1.9][dist]*
 
-[![Build Status](https://travis-ci.org/ichiriac/sofa-odm.svg)](https://travis-ci.org/ichiriac/sofa-odm)
-[![Dependency Status](https://david-dm.org/ichiriac/sofa-odm.svg)](https://david-dm.org/ichiriac/sofa-odm)
-[![Coverage Status](https://coveralls.io/repos/ichiriac/sofa-odm/badge.png?branch=master)](https://coveralls.io/r/ichiriac/sofa-odm?branch=master)
+[![Build Status](https://travis-ci.org/ichiriac/node-nosql-odm.svg)](https://travis-ci.org/ichiriac/node-nosql-odm)
+[![Dependency Status](https://david-dm.org/ichiriac/node-nosql-odm.svg)](https://david-dm.org/ichiriac/node-nosql-odm)
+[![Coverage Status](https://img.shields.io/coveralls/ichiriac/node-nosql-odm.svg)](https://coveralls.io/r/ichiriac/node-nosql-odm)
 
 ## Getting started
+
+Actually the only available driver is written for Couchbase, so you can use it
+dirrectly : [Sofa ODM](http://ichiriac.github.io/sofa-odm/)
+
+You can also start to write your own driver, so you have just to start a new project and add nodm as a dependency :
 
 ```sh
 npm install nodm --save
