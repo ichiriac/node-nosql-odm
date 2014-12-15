@@ -1,14 +1,14 @@
 var assert = require('assert');
 
-var test = function(driver) {
+describe('test behaviours', function() {
 
-  var couchbase;
+  var session;
   var mapper;
 
-  it('should connect to ' + driver, function(done) {
-    require('./connector')(driver).then(function(api) {
-      couchbase = api;
-      mapper = couchbase.declare('behaviour', {
+  it('should connect', function(done) {
+    require('./connector')().then(function(api) {
+      session = api;
+      mapper = session.declare('behaviour', {
         properties: {
           foo: {
             unique: true
@@ -90,12 +90,4 @@ var test = function(driver) {
     }).done();
   });
 
-};
-
-describe('test behaviours (couchbase)', function() {
-  test('couchbase');
-});
-
-describe('test behaviours (redis)', function() {
-  test('redis');
 });

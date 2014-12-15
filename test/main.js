@@ -1,9 +1,10 @@
 var assert = require('assert');
 
-var tests = function(driver) {
+// run tests
+describe('test main api', function() {
   var session;
-  it('should connect to ' + driver, function(done) {
-    require('./connector')(driver).then(function(api) {
+  it('should connect', function(done) {
+    require('./connector')().then(function(api) {
       assert(typeof api.declare === 'function', 'should have declare function');
       assert(typeof api.get === 'function', 'should have get function');
       assert(typeof api.has === 'function', 'should have has function');
@@ -44,18 +45,13 @@ var tests = function(driver) {
       done();
     });
     session.disconnect().then(function() {
-      return session.connect(driver,
-        driver == 'couchbase' ? {
-          host: 'demo.123:8091'
-          , bucket: 'unknown'
-          , params : {
-              mock: false
-          }
-        } : {
-          host: 'demo.123:6379',
-          database: 1
+      return session.connect({
+        host: 'demo.123:8091'
+        , bucket: 'unknown'
+        , params : {
+            mock: false
         }
-      );
+      });
     }).then(function() {
       assert(false, 'should not be connected to "unknown" bucket / host !');
     }, function() {
@@ -63,14 +59,4 @@ var tests = function(driver) {
       assert(true);
     }).done();
   });
-};
-
-// run tests on couchbase
-describe('test main api (couchbase)', function() {
-  tests('couchbase');
-});
-
-// run tests on redis
-describe('test main api (redis)', function() {
-  tests('redis');
 });

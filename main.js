@@ -86,6 +86,9 @@ manager.q = q;
  */
 manager.prototype.connect = function(driver, options) {
   var result = q.defer();
+  if (typeof driver !== 'function') {
+    throw new Error('The driver MUST be a constructor function !');
+  }
   if (typeof options === 'string') {
     var meta = url.parse(options, true, true);
     options = {
