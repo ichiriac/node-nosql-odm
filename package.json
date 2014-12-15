@@ -1,6 +1,6 @@
 {
   "name": "nodm",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "description": "NodeJS ODM for NoSQL, Couchbase, Redis",
   "main": "main.js",
   "directories": {
@@ -41,6 +41,6 @@
     "mocha-lcov-reporter": "0.0.1"
   },
   "devDependencies": {
-    "sofa-odm": "^0.1.8"
+    "couchbase": "1.2.4"
   }
 }

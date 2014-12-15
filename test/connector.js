@@ -3,8 +3,15 @@ try {
   var config = require(process.cwd() + '/config');
   var manager = require(process.cwd() + '/main');
 } catch(e) {
-  var config = require(process.cwd() + '/node_modules/sofa-odm/config');
-  var manager = require(process.cwd() + '/node_modules/sofa-odm/main');
+  // inject sofa driver (mockup)
+  var config = require('./sofa-odm/config');
+  var manager = require('../main');
+  var connect = manager.prototype.connect;
+  manager.prototype.connect = function(options) {
+    return connect.apply(this, [
+      require('./sofa-odm/src/driver'), options
+    ]);
+  };
 }
 
 
