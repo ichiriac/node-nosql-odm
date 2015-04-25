@@ -12,7 +12,7 @@ technicals aspects of any NoSQL engine (support Couchbase, Redis and Sphinx).
  * Mappers definition are compliant with JSON Schema Definition
  * Using Promises API and EventEmitter
 
-*Current version: [v/0.1.10][dist]*
+*Current version: [v/0.1.11][dist]*
 
 [![Build Status](https://travis-ci.org/ichiriac/node-nosql-odm.svg)](https://travis-ci.org/ichiriac/node-nosql-odm)
 [![Dependency Status](https://david-dm.org/ichiriac/node-nosql-odm.svg)](https://david-dm.org/ichiriac/node-nosql-odm)
