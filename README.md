@@ -23,7 +23,7 @@ technicals aspects of any NoSQL engine (support Couchbase, Redis and Sphinx).
 Pick a driver to use depending on your NoSQL server :
 
 - [CouchBase : Sofa ODM](https://github.com/ichiriac/sofa-odm/)
-- [Redis : ReDM](https://github.com/ichiriac/sofa-odm/)
+- [Redis : ReDM](https://github.com/ichiriac/redm/)
 
 
 ## Writing a new driver
