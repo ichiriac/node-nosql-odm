@@ -33,14 +33,14 @@
   "dependencies": {
     "extend": "^2.0.0",
     "node-uuid": "^1.4.1",
-    "q": "^1.0.1",
+    "q": "^1.0.1"
+  },
+  "devDependencies": {
+    "couchbase": "1.2.4",
     "mocha": "^2.0.1",
     "istanbul": "^0.3.0",
     "jsdox": "^0.4.2",
     "coveralls": "~2.11.1",
     "mocha-lcov-reporter": "0.0.1"
-  },
-  "devDependencies": {
-    "couchbase": "1.2.4"
   }
 }
