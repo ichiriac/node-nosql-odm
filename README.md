@@ -1,8 +1,8 @@
 # NodeJS NoSQL ODM
 
-This library is a tiny & simplistic ODM for Couchbase that will help you to 
+This library is a tiny & simplistic ODM that will help you to
 build a business model layer with ease, and without having to deal with 
-technicals aspects of any NoSQL engine (support Couchbase).
+technicals aspects of any NoSQL engine (support Couchbase, Redis and Sphinx).
 
  * CRUD operations
  * Getters & Setters on records properties
@@ -20,14 +20,21 @@ technicals aspects of any NoSQL engine (support Couchbase).
 
 ## Getting started
 
-Actually the only available driver is written for Couchbase, so you can use it
-dirrectly : [Sofa ODM](http://ichiriac.github.io/sofa-odm/)
+Pick a driver to use depending on your NoSQL server :
+
+- [CouchBase : Sofa ODM](https://github.com/ichiriac/sofa-odm/)
+- [Redis : ReDM](https://github.com/ichiriac/sofa-odm/)
+
+
+## Writing a new driver
 
 You can also start to write your own driver, so you have just to start a new project and add nodm as a dependency :
 
 ```sh
 npm install nodm --save
 ```
+
+Take a look at already implemented drivers
 
 #Misc
 
